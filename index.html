@@ -16,9 +16,7 @@
         <!-- SGPA Section -->
         <div id="sgpaSection" class="input-section" style="display:none;">
             <label for="subjects">Number of Subjects:</label>
-            <select id="subjects">
-                <option value="">Select Subjects</option>
-            </select>
+            <input type="number" id="subjects" placeholder="Enter number of subjects" min="1" max="20">
             <button onclick="generateSGPAInputs()">Generate Fields</button>
             <div id="sgpaInputs"></div>
             <button id="sgpaCalcBtn" onclick="calculateSGPA()" style="display:none;">Calculate SGPA</button>
