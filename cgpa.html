@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA & SGPA Calculator</title>
+    <link rel="stylesheet" href="cgpa.css">
+</head>
+<body>
+    <div class="container">
+        <h2>CGPA AND SGPA CALCULATOR</h2>
+        <label>SELECT TYPE:</label>
+        <button onclick="showCGPA()">CGPA CALCULATOR</button>
+        <button onclick="showSGPA()">SGPA CALCULATOR</button>
+
+        <!-- SGPA Section -->
+        <div id="sgpaSection" class="input-section" style="display:none;">
+            <label for="subjects">Number of Subjects:</label>
+            <select id="subjects">
+                <option value="">Select Subjects</option>
+            </select>
+            <button onclick="generateSGPAInputs()">Generate Fields</button>
+            <div id="sgpaInputs"></div>
+            <button id="sgpaCalcBtn" onclick="calculateSGPA()" style="display:none;">Calculate SGPA</button>
+        </div>
+
+        <!-- CGPA Section -->
+        <div id="cgpaSection" class="input-section" style="display:none;">
+            <label for="semesters">Number of Semesters:</label>
+            <select id="semesters">
+                <option value="">Select Semesters</option>
+            </select>
+            <button onclick="generateCGPAInputs()">Generate Fields</button>
+            <div id="cgpaInputs"></div>
+            <button id="cgpaCalcBtn" onclick="calculateCGPA()" style="display:none;">Calculate CGPA</button>
+        </div>
+
+        <div id="result" class="result"></div>
+        <div id="congrats" class="congrats"></div>
+    </div>
+
+    <!-- Confetti JS -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
