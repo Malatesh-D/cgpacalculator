@@ -1,4 +1,4 @@
-// Fill dropdowns dynamically
+// Fill semesters dropdown dynamically
 function fillDropdown(id) {
     const dropdown = document.getElementById(id);
     for (let i = 1; i <= 9; i++) {
@@ -8,7 +8,6 @@ function fillDropdown(id) {
         dropdown.add(option);
     }
 }
-fillDropdown("subjects");
 fillDropdown("semesters");
 
 function showSGPA() {
@@ -31,8 +30,8 @@ function generateSGPAInputs() {
     container.innerHTML = "";
     document.getElementById('sgpaCalcBtn').style.display = "none";
 
-    if (!num) {
-        alert("Please select number of subjects");
+    if (!num || num <= 0) {
+        alert("Please enter a valid number of subjects");
         return;
     }
 
